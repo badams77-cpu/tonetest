@@ -29,7 +29,6 @@ public class SampleStore {
         LOGGER.debug("Reading directory "+dir.getAbsolutePath());
         for(File f: dir.listFiles()){
             String name = f.getName();
-            LOGGER.debug("testing "+name);
             if (name.endsWith(".wav")) {
                 Pattern pat = Pattern.compile("^([a-zA-Z0-9]*)_(\\d)\\.wav");
                 Matcher matcher = pat.matcher(name);

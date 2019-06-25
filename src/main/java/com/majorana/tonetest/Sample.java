@@ -9,7 +9,7 @@ import java.io.IOException;
 
 public class Sample {
 
-    private double matchCutoff = 0.5;
+    private double matchCutoff = 0.3333;
 
     public static final int SEMITONES_IN_OCTAVE = 12;
     private static Logger LOGGER = LogManager.getLogger(Sample.class);
@@ -39,19 +39,7 @@ public class Sample {
                 }
 
             }
-            double max=0;
-            for(int i = 0; i< SEMITONES_IN_OCTAVE; i++){
-                if (octaveData[i]>max){
-                    max = octaveData[i];
-                }
-            }
-            if (max!=0.0) {
-                for (int i = 0; i < SEMITONES_IN_OCTAVE; i++) {
-                    octaveData[i] = octaveData[i] / max;
-                }
-            } else {
-                LOGGER.warn("sample "+name+" null data");
-            }
+            octaveData = FFTEngine.normalize(octaveData);
             wavFile.close();
         } catch (IOException e){
             LOGGER.error("readWavFully: IOException ",e);

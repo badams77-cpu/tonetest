@@ -16,7 +16,7 @@ public class FFTEngine {
     public static final int SEMITONES_IN_OCTAVE = 12;
     private static Logger LOGGER = LogManager.getLogger(FFTEngine.class);
 
-    private static int samplesPerSecond=8;
+    private static int samplesPerSecond=4;
 
     private int[] octaveFrequencies = {16,32,65,130,261,523,1047,2093,4186,8372};
 
@@ -65,13 +65,14 @@ public class FFTEngine {
     public double[] getOctave(int octave){
         double[] ret = new double[SEMITONES_IN_OCTAVE];
         int[] counts = new int[SEMITONES_IN_OCTAVE];
-        int lowFreq = octaveFrequencies[octave-1];
-        int highFreq = octaveFrequencies[octave];
-        int lowBin = (int) ( data.length*lowFreq/(2*rate));
-        int highBin = (int) ( data.length*highFreq/(2*rate));
+        int lowFreq = octaveFrequencies[octave];
+        int highFreq = octaveFrequencies[octave+1];
+        int lowBin = (int) ( data.length*lowFreq/(rate));
+        int highBin = (int) ( data.length*highFreq/(rate));
+
         if (highBin>data.length){ return ret; }
         for(int i=lowBin; i<highBin;i++){
-            int noteNumber = (int) (((i-lowBin)*SEMITONES_IN_OCTAVE*1.0)/highBin);
+            int noteNumber = (int) Math.floor(((i-lowBin)*SEMITONES_IN_OCTAVE*1.0)/(highBin-lowBin));
             ret[noteNumber]+= data[i];
             counts[noteNumber]++;
         }
@@ -82,16 +83,15 @@ public class FFTEngine {
     }
 
     public static double[] normalize(double[] octaveData){
-        double max=0;
+        double sumsq=0;
         double ret[] = new double[SEMITONES_IN_OCTAVE];
         for(int i = 0; i< SEMITONES_IN_OCTAVE; i++){
-            if (octaveData[i]>max){
-                max = octaveData[i];
-            }
+            sumsq+= octaveData[i]*octaveData[i];
         }
-        if (max!=0.0) {
+        if (sumsq!=0.0) {
+            double rms = Math.sqrt(sumsq);
             for (int i = 0; i < SEMITONES_IN_OCTAVE; i++) {
-                ret[i] = octaveData[i] / max;
+                ret[i] = octaveData[i] / rms;
             }
         } else {
             LOGGER.warn("Read null sample");

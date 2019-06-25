@@ -1,17 +1,12 @@
-2019-06-25 16:17:28.105 [main] DEBUG com.majorana.tonetest.SampleStore - Reading directory C:\Users\barry\IdeaProjects\tonetest\sample
-2019-06-25 16:17:28.105 [main] DEBUG com.majorana.tonetest.SampleStore - testing ear_6.wav
-2019-06-25 16:17:28.105 [main] DEBUG com.majorana.tonetest.SampleStore - Reading ear_6.wav
-2019-06-25 16:17:28.174 [main] DEBUG com.majorana.tonetest.SampleStore - testing he_6.wav
-2019-06-25 16:17:28.174 [main] DEBUG com.majorana.tonetest.SampleStore - Reading he_6.wav
-2019-06-25 16:17:28.174 [main] DEBUG com.majorana.tonetest.SampleStore - testing i_6.wav
-2019-06-25 16:17:28.174 [main] DEBUG com.majorana.tonetest.SampleStore - Reading i_6.wav
-2019-06-25 16:17:28.190 [main] DEBUG com.majorana.tonetest.SampleStore - testing ry_6.wav
-2019-06-25 16:17:28.190 [main] DEBUG com.majorana.tonetest.SampleStore - Reading ry_6.wav
-2019-06-25 16:17:28.190 [main] DEBUG com.majorana.tonetest.SampleStore - testing wo_6.wav
-2019-06-25 16:17:28.190 [main] DEBUG com.majorana.tonetest.SampleStore - Reading wo_6.wav
-2019-06-25 16:17:28.221 [main] INFO  com.majorana.tonetest.Application - 2: 
-2019-06-25 16:17:28.221 [main] INFO  com.majorana.tonetest.Application - 3:hewohewohewohewohewohewohewohewohewohe
-2019-06-25 16:17:28.221 [main] INFO  com.majorana.tonetest.Application - 4:hewohe
-2019-06-25 16:17:28.221 [main] INFO  com.majorana.tonetest.Application - 5:wohewohe
-2019-06-25 16:17:28.221 [main] INFO  com.majorana.tonetest.Application - 6:hewohe
-2019-06-25 16:17:28.221 [main] INFO  com.majorana.tonetest.Application - 7:heiheihe
+2019-06-25 19:51:35.592 [main] DEBUG com.majorana.tonetest.SampleStore - Reading directory C:\Users\barry\IdeaProjects\tonetest\sample
+2019-06-25 19:51:35.592 [main] DEBUG com.majorana.tonetest.SampleStore - Reading ear_6.wav
+2019-06-25 19:51:35.639 [main] DEBUG com.majorana.tonetest.SampleStore - Reading he_6.wav
+2019-06-25 19:51:35.654 [main] DEBUG com.majorana.tonetest.SampleStore - Reading i_6.wav
+2019-06-25 19:51:35.661 [main] DEBUG com.majorana.tonetest.SampleStore - Reading ry_6.wav
+2019-06-25 19:51:35.661 [main] DEBUG com.majorana.tonetest.SampleStore - Reading wo_6.wav
+2019-06-25 19:51:35.692 [main] INFO  com.majorana.tonetest.Application - 2:i ryearhe
+2019-06-25 19:51:35.692 [main] INFO  com.majorana.tonetest.Application - 3:i i ryhe 
+2019-06-25 19:51:35.692 [main] INFO  com.majorana.tonetest.Application - 4:i iry ry he
+2019-06-25 19:51:35.692 [main] INFO  com.majorana.tonetest.Application - 5:ryearhe
+2019-06-25 19:51:35.692 [main] INFO  com.majorana.tonetest.Application - 6:ryiworyheear
+2019-06-25 19:51:35.692 [main] INFO  com.majorana.tonetest.Application - 7:he heear he
