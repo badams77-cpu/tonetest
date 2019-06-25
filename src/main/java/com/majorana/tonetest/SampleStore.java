@@ -29,18 +29,28 @@ public class SampleStore {
         LOGGER.debug("Reading directory "+dir.getAbsolutePath());
         for(File f: dir.listFiles()){
             String name = f.getName();
-            if (name.equalsIgnoreCase(".wav")) {
-                Pattern pat = Pattern.compile("^([a-zA-Z0-0])*_(\\d)");
+            LOGGER.debug("testing "+name);
+            if (name.endsWith(".wav")) {
+                Pattern pat = Pattern.compile("^([a-zA-Z0-9]*)_(\\d)\\.wav");
                 Matcher matcher = pat.matcher(name);
                 if (!matcher.find()) {
-                    LOGGER.debug(name+" does match pattern test_octavenumber");
+                    LOGGER.debug(name+" does not match pattern test_octavenumber");
                     continue;
                 }
                 String text = matcher.group(1);
                 int octave = Integer.parseInt(matcher.group(2));
+                Sample samp = new Sample(text, octave);
+                LOGGER.debug("Reading "+f.getName());
+                samp.readWavFully(f);
+                samples.add(samp);
             }
 
         }
 
     }
+
+    public List<Sample> getSamples(){
+        return samples;
+    }
+
 }

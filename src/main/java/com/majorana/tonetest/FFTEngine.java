@@ -13,7 +13,8 @@ import java.io.IOException;
 
 public class FFTEngine {
 
-    Logger LOGGER = LogManager.getLogger(FFTEngine.class);
+    public static final int SEMITONES_IN_OCTAVE = 12;
+    private static Logger LOGGER = LogManager.getLogger(FFTEngine.class);
 
     private static int samplesPerSecond=8;
 
@@ -32,10 +33,12 @@ public class FFTEngine {
         rate = wavFile.getSampleRate();
         samplesPerBlock = (int) rate/samplesPerSecond;
         double channelBuffer[] = new double[numChannels*samplesPerBlock];
+        int valid_length = 1;
+        while(valid_length<samplesPerBlock){ valid_length=valid_length*2; }
         try {
                 int framesRead = wavFile.readFrames(channelBuffer, samplesPerBlock);
-                if (framesRead==0){ return framesRead; }
-                double[] monoBuffer = new double[samplesPerBlock];
+                if (framesRead==0 || framesRead<samplesPerBlock){ return 0; }
+                double[] monoBuffer = new double[valid_length];
                 // Add each channel onto total
                 for(int i=0; i<samplesPerBlock;i+=1){
                     int pos = i*numChannels;
@@ -60,19 +63,38 @@ public class FFTEngine {
     }
 
     public double[] getOctave(int octave){
-        double[] ret = new double[12];
-        int[] counts = new int[12];
-        int lowFreq = octaveFrequencies[octave];
-        int highFreq = octaveFrequencies[octave+1];
-        int lowBin = (int) ( data.length*rate/(2*lowFreq));
-        int highBin = (int) ( data.length*rate/(2*highFreq));
+        double[] ret = new double[SEMITONES_IN_OCTAVE];
+        int[] counts = new int[SEMITONES_IN_OCTAVE];
+        int lowFreq = octaveFrequencies[octave-1];
+        int highFreq = octaveFrequencies[octave];
+        int lowBin = (int) ( data.length*lowFreq/(2*rate));
+        int highBin = (int) ( data.length*highFreq/(2*rate));
+        if (highBin>data.length){ return ret; }
         for(int i=lowBin; i<highBin;i++){
-            int noteNumber = (int) Math.floor(((i-lowBin)*12.0)/highBin);
+            int noteNumber = (int) (((i-lowBin)*SEMITONES_IN_OCTAVE*1.0)/highBin);
             ret[noteNumber]+= data[i];
             counts[noteNumber]++;
         }
-        for(int i=0;i<12;i++){
+        for(int i = 0; i< SEMITONES_IN_OCTAVE; i++){
             ret[i] = counts[i]>0 ? ret[i]/counts[i] : 0;
+        }
+        return ret;
+    }
+
+    public static double[] normalize(double[] octaveData){
+        double max=0;
+        double ret[] = new double[SEMITONES_IN_OCTAVE];
+        for(int i = 0; i< SEMITONES_IN_OCTAVE; i++){
+            if (octaveData[i]>max){
+                max = octaveData[i];
+            }
+        }
+        if (max!=0.0) {
+            for (int i = 0; i < SEMITONES_IN_OCTAVE; i++) {
+                ret[i] = octaveData[i] / max;
+            }
+        } else {
+            LOGGER.warn("Read null sample");
         }
         return ret;
     }
