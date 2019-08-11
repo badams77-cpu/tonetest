@@ -37,7 +37,8 @@ public class FFTEngine {
         while(valid_length<samplesPerBlock){ valid_length=valid_length*2; }
         try {
                 int framesRead = wavFile.readFrames(channelBuffer, samplesPerBlock);
-                if (framesRead==0 || framesRead<samplesPerBlock){ return 0; }
+//                if (framesRead==0 || framesRead<samplesPerBlock){ return 0; }
+                if (framesRead==0){ return 0; }
                 double[] monoBuffer = new double[valid_length];
                 // Add each channel onto total
                 for(int i=0; i<samplesPerBlock;i+=1){

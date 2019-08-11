@@ -30,9 +30,6 @@ public class Sample {
             FFTEngine fftEngine = new FFTEngine();
             int read=1;
             while(read>0) {
-//                if (inFile.getName().equals("v_4.wav")){
-//                    LOGGER.info("v_4");
-//                }
                 read = fftEngine.computeWavBlock(wavFile);
                 if (read>0){
                     double data[] = fftEngine.getOctave(octaveNumber);

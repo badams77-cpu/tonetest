@@ -17,7 +17,7 @@ public class ToneMatcher {
 
     private static final int volumeLength = FFTEngine.SAMPLES_PER_SECOND * 8;
 
-    private static final int MINIMUM_FOR_QUIET = FFTEngine.SAMPLES_PER_SECOND/2;
+    private static final int MINIMUM_FOR_QUIET = FFTEngine.SAMPLES_PER_SECOND/4;
 
     private static final double RATIO_FOR_QUIET = 1.0/4.0;
 
