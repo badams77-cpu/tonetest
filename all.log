@@ -1,12 +1,14 @@
-2019-06-25 19:51:35.592 [main] DEBUG com.majorana.tonetest.SampleStore - Reading directory C:\Users\barry\IdeaProjects\tonetest\sample
-2019-06-25 19:51:35.592 [main] DEBUG com.majorana.tonetest.SampleStore - Reading ear_6.wav
-2019-06-25 19:51:35.639 [main] DEBUG com.majorana.tonetest.SampleStore - Reading he_6.wav
-2019-06-25 19:51:35.654 [main] DEBUG com.majorana.tonetest.SampleStore - Reading i_6.wav
-2019-06-25 19:51:35.661 [main] DEBUG com.majorana.tonetest.SampleStore - Reading ry_6.wav
-2019-06-25 19:51:35.661 [main] DEBUG com.majorana.tonetest.SampleStore - Reading wo_6.wav
-2019-06-25 19:51:35.692 [main] INFO  com.majorana.tonetest.Application - 2:i ryearhe
-2019-06-25 19:51:35.692 [main] INFO  com.majorana.tonetest.Application - 3:i i ryhe 
-2019-06-25 19:51:35.692 [main] INFO  com.majorana.tonetest.Application - 4:i iry ry he
-2019-06-25 19:51:35.692 [main] INFO  com.majorana.tonetest.Application - 5:ryearhe
-2019-06-25 19:51:35.692 [main] INFO  com.majorana.tonetest.Application - 6:ryiworyheear
-2019-06-25 19:51:35.692 [main] INFO  com.majorana.tonetest.Application - 7:he heear he
+2019-08-11 16:06:10.346 [main] DEBUG com.majorana.tonetest.SampleStore - Reading directory C:\Users\barry\IdeaProjects\tonetest\sample
+2019-08-11 16:06:10.350 [main] DEBUG com.majorana.tonetest.SampleStore - Reading air_6.wav
+2019-08-11 16:06:10.353 [main] WARN  com.majorana.tonetest.FFTEngine - Read null sample
+2019-08-11 16:06:10.354 [main] DEBUG com.majorana.tonetest.SampleStore - Reading ear_6.wav
+2019-08-11 16:06:10.399 [main] DEBUG com.majorana.tonetest.SampleStore - Reading he_6.wav
+2019-08-11 16:06:10.403 [main] DEBUG com.majorana.tonetest.SampleStore - Reading i_6.wav
+2019-08-11 16:06:10.411 [main] DEBUG com.majorana.tonetest.SampleStore - Reading ry_6.wav
+2019-08-11 16:06:10.416 [main] DEBUG com.majorana.tonetest.SampleStore - Reading wo_6.wav
+2019-08-11 16:06:10.454 [main] INFO  com.majorana.tonetest.Application - 2:iwo
+2019-08-11 16:06:10.454 [main] INFO  com.majorana.tonetest.Application - 3:iworyhe
+2019-08-11 16:06:10.454 [main] INFO  com.majorana.tonetest.Application - 4:he
+2019-08-11 16:06:10.454 [main] INFO  com.majorana.tonetest.Application - 5:ryhe
+2019-08-11 16:06:10.454 [main] INFO  com.majorana.tonetest.Application - 6:ryiworyheear
+2019-08-11 16:06:10.454 [main] INFO  com.majorana.tonetest.Application - 7:heihe

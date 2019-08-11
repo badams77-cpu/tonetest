@@ -9,7 +9,7 @@ import java.io.IOException;
 
 public class Sample {
 
-    private double matchCutoff = 0.3333;
+    private double matchCutoff = 0.300;
 
     public static final int SEMITONES_IN_OCTAVE = 12;
     private static Logger LOGGER = LogManager.getLogger(Sample.class);
@@ -30,6 +30,9 @@ public class Sample {
             FFTEngine fftEngine = new FFTEngine();
             int read=1;
             while(read>0) {
+//                if (inFile.getName().equals("v_4.wav")){
+//                    LOGGER.info("v_4");
+//                }
                 read = fftEngine.computeWavBlock(wavFile);
                 if (read>0){
                     double data[] = fftEngine.getOctave(octaveNumber);
@@ -49,8 +52,8 @@ public class Sample {
     }
 
     public double match(double testOctaveData[]){
-        if (name.equals("i")){
-           LOGGER.trace("testing i");
+        if (name.equals("wo")){
+           LOGGER.trace("testing wo");
         }
         double match = 0.0;
         for(int i=0; i<SEMITONES_IN_OCTAVE; i++ ){

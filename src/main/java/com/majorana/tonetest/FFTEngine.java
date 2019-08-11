@@ -16,7 +16,7 @@ public class FFTEngine {
     public static final int SEMITONES_IN_OCTAVE = 12;
     private static Logger LOGGER = LogManager.getLogger(FFTEngine.class);
 
-    private static int samplesPerSecond=4;
+    public static int SAMPLES_PER_SECOND =8;
 
     private int[] octaveFrequencies = {16,32,65,130,261,523,1047,2093,4186,8372};
 
@@ -31,7 +31,7 @@ public class FFTEngine {
     public int  computeWavBlock(WavFile wavFile){
         int numChannels = wavFile.getNumChannels();
         rate = wavFile.getSampleRate();
-        samplesPerBlock = (int) rate/samplesPerSecond;
+        samplesPerBlock = (int) rate/ SAMPLES_PER_SECOND;
         double channelBuffer[] = new double[numChannels*samplesPerBlock];
         int valid_length = 1;
         while(valid_length<samplesPerBlock){ valid_length=valid_length*2; }
@@ -65,14 +65,16 @@ public class FFTEngine {
     public double[] getOctave(int octave){
         double[] ret = new double[SEMITONES_IN_OCTAVE];
         int[] counts = new int[SEMITONES_IN_OCTAVE];
-        int lowFreq = octaveFrequencies[octave];
-        int highFreq = octaveFrequencies[octave+1];
+        double lowFreq = octaveFrequencies[octave]*(SEMITONES_IN_OCTAVE-1.0)/SEMITONES_IN_OCTAVE;
+        double highFreq = octaveFrequencies[octave+1];
+
         int lowBin = (int) ( data.length*lowFreq/(rate));
         int highBin = (int) ( data.length*highFreq/(rate));
 
         if (highBin>data.length){ return ret; }
         for(int i=lowBin; i<highBin;i++){
-            int noteNumber = (int) Math.floor(((i-lowBin)*SEMITONES_IN_OCTAVE*1.0)/(highBin-lowBin));
+            int noteNumber = (int) Math.round(((i-lowBin)*SEMITONES_IN_OCTAVE*1.0)/(highBin-lowBin));
+            if (noteNumber>=SEMITONES_IN_OCTAVE || noteNumber<0) continue;
             ret[noteNumber]+= data[i];
             counts[noteNumber]++;
         }
@@ -83,13 +85,9 @@ public class FFTEngine {
     }
 
     public static double[] normalize(double[] octaveData){
-        double sumsq=0;
         double ret[] = new double[SEMITONES_IN_OCTAVE];
-        for(int i = 0; i< SEMITONES_IN_OCTAVE; i++){
-            sumsq+= octaveData[i]*octaveData[i];
-        }
-        if (sumsq!=0.0) {
-            double rms = Math.sqrt(sumsq);
+        double rms =rms(octaveData);
+        if (rms!=0.0) {
             for (int i = 0; i < SEMITONES_IN_OCTAVE; i++) {
                 ret[i] = octaveData[i] / rms;
             }
@@ -97,6 +95,16 @@ public class FFTEngine {
             LOGGER.warn("Read null sample");
         }
         return ret;
+    }
+
+    public static double rms(double octaveData[]){
+        double sumsq=0;
+
+        for(int i = 0; i< SEMITONES_IN_OCTAVE; i++){
+            sumsq+= octaveData[i]*octaveData[i];
+        }
+        double rms = Math.sqrt(sumsq);
+        return rms;
     }
 
 }
