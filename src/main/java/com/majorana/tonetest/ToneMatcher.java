@@ -19,7 +19,7 @@ public class ToneMatcher {
 
     private static final int MINIMUM_FOR_QUIET = FFTEngine.SAMPLES_PER_SECOND/4;
 
-    private static final double RATIO_FOR_QUIET = 1.0/4.0;
+    private static final double RATIO_FOR_QUIET = 1.0/3.0;
 
     private static final double matchFraction = 1.0/12.0;
 

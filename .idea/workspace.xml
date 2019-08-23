@@ -5,15 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0849d107-96f5-457c-9562-d98012eb7705" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/sample/a_4.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sample/air_6.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sample/e_4.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sample/m_4.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sample/or_4.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/all.log" beforeDir="false" afterPath="$PROJECT_DIR$/all.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/majorana/tonetest/FFTEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/majorana/tonetest/FFTEngine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/majorana/tonetest/Sample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/majorana/tonetest/Sample.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/majorana/tonetest/ToneMatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/majorana/tonetest/ToneMatcher.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
@@ -139,8 +131,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/majorana/tonetest/ToneMatcher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="19" column="79" selection-start-line="19" selection-start-column="79" selection-end-line="19" selection-end-column="79" />
+            <state relative-caret-position="-714">
+              <caret line="21" column="55" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -183,6 +175,7 @@
     <option name="width" value="1456" />
     <option name="height" value="876" />
   </component>
+  <component name="ProjectId" id="1PqCFuELIpdN2N4UBDSbK7BKxpL" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -336,13 +329,21 @@
       <option name="project" value="LOCAL" />
       <updated>1565536388013</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="More sample">
+      <created>1565538033325</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1565538033325</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25787964" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25787964" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -352,7 +353,7 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32974428" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32974428" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39973083" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -378,7 +379,8 @@
     <MESSAGE value="Second Day, matching but not well" />
     <MESSAGE value="Second Day, improved matching" />
     <MESSAGE value="Add Quietness detection" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Quietness detection" />
+    <MESSAGE value="More sample" />
+    <option name="LAST_COMMIT_MESSAGE" value="More sample" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -485,8 +487,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/majorana/tonetest/ToneMatcher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="19" column="79" selection-start-line="19" selection-start-column="79" selection-end-line="19" selection-end-column="79" />
+        <state relative-caret-position="-714">
+          <caret line="21" column="55" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
