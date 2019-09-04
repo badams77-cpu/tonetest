@@ -1,17 +1,17 @@
-2019-08-11 16:44:49.103 [main] DEBUG com.majorana.tonetest.SampleStore - Reading directory C:\Users\barry\IdeaProjects\tonetest\sample
-2019-08-11 16:44:49.107 [main] DEBUG com.majorana.tonetest.SampleStore - Reading air_6.wav
-2019-08-11 16:44:49.144 [main] DEBUG com.majorana.tonetest.SampleStore - Reading a_4.wav
-2019-08-11 16:44:49.165 [main] DEBUG com.majorana.tonetest.SampleStore - Reading ear_6.wav
-2019-08-11 16:44:49.175 [main] DEBUG com.majorana.tonetest.SampleStore - Reading e_4.wav
-2019-08-11 16:44:49.177 [main] DEBUG com.majorana.tonetest.SampleStore - Reading he_6.wav
-2019-08-11 16:44:49.183 [main] DEBUG com.majorana.tonetest.SampleStore - Reading i_6.wav
-2019-08-11 16:44:49.192 [main] DEBUG com.majorana.tonetest.SampleStore - Reading m_4.wav
-2019-08-11 16:44:49.194 [main] DEBUG com.majorana.tonetest.SampleStore - Reading or_4.wav
-2019-08-11 16:44:49.195 [main] DEBUG com.majorana.tonetest.SampleStore - Reading ry_6.wav
-2019-08-11 16:44:49.200 [main] DEBUG com.majorana.tonetest.SampleStore - Reading wo_6.wav
-2019-08-11 16:44:49.591 [main] INFO  com.majorana.tonetest.Application - 2:woaearorwo mwomryorhemairamoram oraoraorawooreawoearheearorawooraoramwoaearwo woorearairwomorearwoairearryearwooraorearwohewomearwomwohewomorhewoorwoearor 
-2019-08-11 16:44:49.591 [main] INFO  com.majorana.tonetest.Application - 3:womamaoraorearheearheearheoraorearheoriearaoraeorioreioraoriorioraormor 
-2019-08-11 16:44:49.591 [main] INFO  com.majorana.tonetest.Application - 4:aormememememeorememamemoremorheryoraoraearmaoreariaioreaeorheoraeoraoriheahe 
-2019-08-11 16:44:49.591 [main] INFO  com.majorana.tonetest.Application - 5:ioraoramamormormoraormormormamaormoreormorewoewoorryairryoraormori mormormormorheorahemhemaairiorryormorryaryairryairearryearairearryairhe 
-2019-08-11 16:44:49.591 [main] INFO  com.majorana.tonetest.Application - 6:oreoreoramoramoreorheaoramaora 
-2019-08-11 16:44:49.591 [main] INFO  com.majorana.tonetest.Application - 7:mormeora 
+2019-08-23 22:22:58.015 [main] DEBUG com.majorana.tonetest.SampleStore - Reading directory C:\Windows.old.000\Users\barry\IdeaProjects\tonetest\sample
+2019-08-23 22:22:58.031 [main] DEBUG com.majorana.tonetest.SampleStore - Reading air_6.wav
+2019-08-23 22:22:58.062 [main] DEBUG com.majorana.tonetest.SampleStore - Reading a_4.wav
+2019-08-23 22:22:58.078 [main] DEBUG com.majorana.tonetest.SampleStore - Reading ear_6.wav
+2019-08-23 22:22:58.078 [main] DEBUG com.majorana.tonetest.SampleStore - Reading e_4.wav
+2019-08-23 22:22:58.093 [main] DEBUG com.majorana.tonetest.SampleStore - Reading he_6.wav
+2019-08-23 22:22:58.093 [main] DEBUG com.majorana.tonetest.SampleStore - Reading i_6.wav
+2019-08-23 22:22:58.093 [main] DEBUG com.majorana.tonetest.SampleStore - Reading m_4.wav
+2019-08-23 22:22:58.093 [main] DEBUG com.majorana.tonetest.SampleStore - Reading or_4.wav
+2019-08-23 22:22:58.093 [main] DEBUG com.majorana.tonetest.SampleStore - Reading ry_6.wav
+2019-08-23 22:22:58.109 [main] DEBUG com.majorana.tonetest.SampleStore - Reading wo_6.wav
+2019-08-23 22:22:58.468 [main] INFO  com.majorana.tonetest.Application - 2:woaearorwo mwomryorhemairamoram oraoraorawooreawoearheearorawooraoramwoaearwo woorearairwomorearwoairearryearwooraorearwohewomearwomwohewomorhewoorwoearor 
+2019-08-23 22:22:58.468 [main] INFO  com.majorana.tonetest.Application - 3:womamaoraorearheearheearheoraorearheoriearaoraeorioreioraoriorioraormor 
+2019-08-23 22:22:58.484 [main] INFO  com.majorana.tonetest.Application - 4:aormememememeorememamemoremorheryoraoraearmaoreariaioreaeorheoraeoraoriheahe 
+2019-08-23 22:22:58.484 [main] INFO  com.majorana.tonetest.Application - 5:ioraoramamormormoraormormormamaormoreormorewoewoorryairryoraormori mormormormorheorahemhemaairiorryormorryaryairryairearryearairearryairhe 
+2019-08-23 22:22:58.484 [main] INFO  com.majorana.tonetest.Application - 6:oreoreoramoramoreorheaoramaora 
+2019-08-23 22:22:58.484 [main] INFO  com.majorana.tonetest.Application - 7:mormeora 
